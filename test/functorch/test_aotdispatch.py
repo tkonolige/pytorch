@@ -6969,7 +6969,9 @@ def forward(self, primals_1, tangents_1):
             SubclassCreationMeta,
         )
         self.assertEqual(
-            keep_input_mutations_meta.subclass_fw_graph_out_meta[0].flat_tensor_start_idx,
+            keep_input_mutations_meta.subclass_fw_graph_out_meta[
+                0
+            ].flat_tensor_start_idx,
             0,
         )
 
@@ -6990,11 +6992,15 @@ def forward(self, primals_1, tangents_1):
             SubclassCreationMeta,
         )
         self.assertEqual(
-            out_of_graph_mutation_meta.subclass_fw_graph_out_meta[0].flat_tensor_start_idx,
+            out_of_graph_mutation_meta.subclass_fw_graph_out_meta[
+                0
+            ].flat_tensor_start_idx,
             0,
         )
         self.assertEqual(
-            out_of_graph_mutation_meta.subclass_fw_graph_out_meta[1].flat_tensor_start_idx,
+            out_of_graph_mutation_meta.subclass_fw_graph_out_meta[
+                1
+            ].flat_tensor_start_idx,
             2,
         )
 
@@ -7068,7 +7074,10 @@ def forward(self, primals_1, tangents_1):
             )
         )
         self.assertEqual(
-            [out_meta.unwrapped_idx for out_meta in metadata.subclass_fw_graph_out_meta],
+            [
+                out_meta.unwrapped_idx
+                for out_meta in metadata.subclass_fw_graph_out_meta
+            ],
             [0, 1, 2],
         )
 

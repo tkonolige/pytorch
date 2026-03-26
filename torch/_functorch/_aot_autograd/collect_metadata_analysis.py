@@ -874,7 +874,6 @@ from a multi-output view call"
             subclass_inp_meta=subclass_inp_meta,
             subclass_fw_graph_out_meta=subclass_fw_graph_out_meta,
             subclass_tangent_meta=subclass_tangent_meta,
-            is_train=is_train,
             grad_enabled_mutation=grad_enabled_mutation,
             static_input_indices=static_input_indices,
             tokens=mode._tokens,
